@@ -5,6 +5,6 @@
 cd $(dirname $0)
 omindex \
     --db default \
-    --url /logs/ChannelLogger \
+    --url /irc/logs \
     -M log:text/plain \
-    '/irc/logs'
+    logs/ChannelLogger
