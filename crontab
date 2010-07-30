@@ -1,0 +1,3 @@
+# m h  dom mon dow   command
+@reboot (cd /home/selenium/selbot && ./run-bot.sh)
+*/10 * * * * (cd /home/selenium/selbot && ./update-index.sh)
