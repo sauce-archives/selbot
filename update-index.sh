@@ -7,4 +7,4 @@ omindex \
     --db default \
     --url /logs/ChannelLogger \
     -M log:text/plain \
-    'logs/ChannelLogger'
+    '/irc/logs'
