@@ -131,7 +131,7 @@ $map{$cgilist{B},<INPUT TYPE=hidden NAME=B VALUE="$html{$_}">}
 <hr />
 <div>
 <small>
-    Brought to you as a courtesy from 
+    Brought to you by
     <a href="http://www.saucelabs.com">Sauce Labs</a>
     <span class="xapian"><a href="http://xapian.org/">$html{$version}</a></span>
 </small>
