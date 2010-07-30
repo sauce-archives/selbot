@@ -57,7 +57,7 @@ $if{$opt{topterms},
 $or{$html{$error},
 $if{$eq{$msize,0},
 $if{$query,No documents match your query,
-<hr>Searching $nice{$dbsize} documents
+<hr>Searching <a href="/irc/logs">$nice{$dbsize} documents</a>
 },
 $if{$not{$msizeexact},
  $nice{$add{$topdoc,1}}-$nice{$last} of about $nice{$msize} matches,
@@ -132,7 +132,7 @@ $map{$cgilist{B},<INPUT TYPE=hidden NAME=B VALUE="$html{$_}">}
 <div>
 <small>
     Brought to you as a courtesy from 
-    <a href="http://www.saucelabs.com">Sauce Labs</a>.
+    <a href="http://www.saucelabs.com">Sauce Labs</a>
     <span class="xapian"><a href="http://xapian.org/">$html{$version}</a></span>
 </small>
 </div>
