@@ -1,9 +1,13 @@
-Create a searchable log repository for #selenium on freenode.
+======================================================
+A searchable log repository for #selenium on freenode.
+======================================================
+
+
+:Author: Miki Tebeka <miki@saucelabs.com>
 
 
 Setup
 =====
-
 * Everything runs under the user "selenium"
 * Fix paths (on new machine)
     - Make sure all paths in lighttpd.conf and selbot.conf are correct
@@ -15,7 +19,6 @@ Setup
 
 TODO
 ====
-
 * Automatically generate the right paths in lighttpd.conf and selbot.conf
 * Make the search template (`omega-templates/query`) nicer
 * Commit selbot.conf from time to time, the bot can be configured from the IRC
@@ -23,8 +26,6 @@ TODO
 
 HACKS
 =====
-
 * I had to patch the ChannelLogger to not use the # prefix for log file names
-  (Didn't manage to write a rewrite rule for lighttpd to do that).
-  See `plugin.diff` (this is automated in `install.sh`)
+    * See `plugin.diff` (this is automated in `install.sh`)
 
