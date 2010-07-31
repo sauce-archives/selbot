@@ -1,15 +1,16 @@
 #!/bin/bash
 
-# Install supybot on local environment
-
+# Exit on 1'st error
 set -e
+
+sudo aptitude install -y xapian-omega xapian-tools python-setuptools lighttpd
+sudo easy_install pip
 
 envdir=ircbot
 if [ ! -e $envdir ]; then
     virtualenv $envdir
 fi
 . $envdir/bin/activate
-easy_install pip
 
 wget 'http://downloads.sourceforge.net/project/supybot/supybot/Supybot-0.83.4.1/Supybot-0.83.4.1.zip?use_mirror=softlayera'
 unzip Supybot-0.83.4.1.zip
@@ -22,3 +23,10 @@ mkdir data
 mkdir tmp
 mkdir -p logs/ChannelLogger
 mkdir plugins
+
+
+# Make symbolic links to create working environment
+ln -s /usr/lib/cgi-bin/omega/omega index.cgi
+root=$PWD
+mkdir irc
+(cd irc && ln -s $root/logs/ChannelLogger logs)
