@@ -36,6 +36,7 @@ HACKS
     supybot/plugins/ChannelLogger/plugin.py
 
     def getLogName(self, channel):
+        # THIS LINE WAS ADDED
         channel = channel[1:] # Remove the #
         if self.registryValue('rotateLogs', channel):
             return '%s.%s.log' % (channel, self.logNameTimestamp(channel))
