@@ -3,7 +3,8 @@
 cd $(dirname $0)
 
 start() {
-    ./run-bot.sh
+    . ircbot/bin/activate
+    supybot -d selbot.conf
 }
 
 stop() {

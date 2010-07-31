@@ -16,7 +16,7 @@ Setup
     - `ln -s $PWD/lighttpd.conf /etc/lighttpd/lighttpd.conf`
 * Restart lighttpd
 * Run the bot
-    - run-bot.sh
+    - selbot.sh start
 * Edit cron to run the bot on startup and index every 10 min
     - see ./crontab
 
