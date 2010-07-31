@@ -7,8 +7,3 @@ fi
 
 aptitude install xapian-omega
 aptitude install xapian-tools
-
-search=search.cgi
-if [ ! -e $search ]; then
-    ln -s /usr/lib/cgi-bin/omega/omega $search
-fi
