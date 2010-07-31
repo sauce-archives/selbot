@@ -20,9 +20,18 @@ Setup
 * Edit cron to run the bot on startup and index every 10 min
     - see ./crontab
 
+TODO
+====
+
+* Automatically generate the right paths in lighttpd.conf and selbot.conf
+* Make the search template (`omega-templates/query`) nicer
+* Commit selbot.conf from time to time, the bot can be configured from the IRC
+  channel
+
 HACKS
 =====
 
 * I had to patch the ChannelLogger to not use the # prefix for log file names
   (Didn't manage to write a rewrite rule for lighttpd to do that).
   See `plugin.diff` (this is automated in `install.sh`)
+
