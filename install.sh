@@ -30,3 +30,9 @@ ln -s /usr/lib/cgi-bin/omega/omega index.cgi
 root=$PWD
 mkdir irc
 (cd irc && ln -s $root/logs/ChannelLogger logs)
+
+date=$(date +%Y%m%d-%H%M%S)
+sudo /etc/init.d/lighttpd stop
+sudo mv /etc/lighttpd/lighttpd.conf /etc/lighttpd/lighttpd.conf.orig.$date
+sudo ln -s $PWD/lighttpd.conf /etc/lighttpd/lighttpd.conf
+sudo /etc/init.d/lighttpd start
