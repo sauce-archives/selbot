@@ -1,0 +1,12 @@
+diff --git a/ircbot/lib/python2.6/site-packages/supybot/plugins/ChannelLogger/plugin.py b/ircbot/lib/python2.6/site-packages/supybot/plugins/ChannelLogger/plugin.py
+index 719e306..9b0cd64 100644
+--- a/ircbot/lib/python2.6/site-packages/supybot/plugins/ChannelLogger/plugin.py
++++ b/ircbot/lib/python2.6/site-packages/supybot/plugins/ChannelLogger/plugin.py
+@@ -104,6 +104,7 @@ class ChannelLogger(callbacks.Plugin):
+         return time.strftime(format)
+ 
+     def getLogName(self, channel):
++        channel = channel[1:] # Trim leading #
+         if self.registryValue('rotateLogs', channel):
+             return '%s.%s.log' % (channel, self.logNameTimestamp(channel))
+         else:

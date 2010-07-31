@@ -15,6 +15,8 @@ wget 'http://downloads.sourceforge.net/project/supybot/supybot/Supybot-0.83.4.1/
 unzip Supybot-0.83.4.1.zip
 pip install Supybot-0.83.4.1.zip
 
+patch -p1 < plugin.diff
+
 # Add directories
 mkdir data
 mkdir tmp
