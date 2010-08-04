@@ -35,11 +35,11 @@ span.xapian {
     float: right;
 }
 </style>
-<title>$if{$query,#selenium Search: $html{$query},#selenium search}</title>
+<title>$if{$query,Search Selenium IRC Logs: $html{$query},Search Selenium IRC Logs}</title>
 $if{$opt{topterms},$include{inc/toptermsjs}}
 </head>
 <body bgcolor="#ffffff">
-<center><h1>#selenium Search</h1></center>
+<center><h1>Search Selenium IRC Logs</h1></center>
 <FORM NAME=P METHOD=GET 
 ACTION="$html{$or{$env{SCRIPT_NAME},omega}}" TARGET="_top">
 <center>
@@ -137,5 +137,13 @@ $map{$cgilist{B},<INPUT TYPE=hidden NAME=B VALUE="$html{$_}">}
 </small>
 </div>
 </body>
+<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    try {
+        var pageTracker = _gat._getTracker("UA-6735579-1");
+        pageTracker._trackPageview();
+    } catch(err) {}
+</script>
 </html>
 $log{query.log}
