@@ -29,3 +29,6 @@ HACKS
 * I had to patch the ChannelLogger to not use the # prefix for log file names
     * See `plugin.diff` (this is automated in `install.sh`)
 
+License
+=======
+Apache (see LICENSE.txt)
